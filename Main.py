@@ -5,7 +5,7 @@ from Jogo import iniciarjogo
 print('===BLACKJACK===')
 
 while True:
-    inicio = input("Para começar, digite o que você deseja. Para regras, digite 'rules' , para começar o jogo digite 'start, para sair digite 'n'': ").lower()
+    inicio = input("Para começar, digite o que você deseja. Para regras, digite 'rules' , para começar o jogo digite 'start, para sair digite 'n': ").lower()
     if inicio == "rules":
         printregras()
     elif inicio == "start":
