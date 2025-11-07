@@ -41,14 +41,21 @@ def compararbanca(cartas_banca, cartas_jog):
     somajoga = somajog(cartas_jog)
 
     while somabanca <= 16:
+            
             carta_nova = random.choice(strings)
             cartas_banca.append(carta_nova)
             somabanca = somaban(cartas_banca)
+    
     if somabanca > 21:
 
         print('Você ganhou! A banca estourou')
         print("Suas cartas: {}".format(cartas_jog))
         print("Cartas da banca: {}".format(cartas_banca))
+    
+    elif (somabanca < somajoga) and (somajoga > 21):
+
+        print("Você perdeu")
+
     else:
 
         if somabanca > somajoga:
@@ -67,3 +74,30 @@ def compararbanca(cartas_banca, cartas_jog):
             print("Cartas da banca: {}".format(cartas_banca))
 
 
+def compracartasjog(cartas_jog):
+    
+    somajoga = somajog(cartas_jog)
+    
+    while somajoga <= 20:
+        carta_nova = random.choice(strings)
+        cartas_jog.append(carta_nova)
+        somajoga = somajog(cartas_jog)
+
+        if somajoga < 21:
+        
+            compra = input('Você possui as seguintes cartas: {} e {} pontos, gostaria de comprar outra carta(Y/N)? '.format(cartas_jog, somajoga)).lower()
+
+            if compra == 'n':
+                break
+        elif somajoga == 21:
+
+            print('Você ja fez 21!') 
+            print(cartas_jog)
+            break
+
+        else:
+            print('Você comprou cartas demais, passou dos 21 pontos. Sua pontuação foi: {} com as cartas: {}'.format(somajoga, cartas_jog))
+
+            break
+    
+    return(cartas_jog)
