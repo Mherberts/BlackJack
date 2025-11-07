@@ -1,4 +1,4 @@
-def blackjackbanca(mao):
+def blackjack(mao):
     
     cartas_10 = {"10", "J", "Q", "K"}
     return ("A" in mao) and any(c in cartas_10 for c in mao)
