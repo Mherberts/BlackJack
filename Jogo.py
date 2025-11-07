@@ -2,11 +2,11 @@ import random
 from regras import blackjack
 from auxiliares import compararbanca , compracartasjog
 
-strings = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" , "A"]
-cartas_jog = random.choices(strings, k=2)  
-cartas_banca = random.choices(strings, k=2)  
-
 def iniciarjogo():
+
+    strings = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" , "A"]
+    cartas_jog = random.choices(strings, k=2)  
+    cartas_banca = random.choices(strings, k=2)  
 
     print(cartas_jog)
     print(cartas_banca[0])
